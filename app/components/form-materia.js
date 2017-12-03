@@ -24,9 +24,6 @@ export default Ember.Component.extend({
       arr.forEach((item)=>{
         console.log('item'+ item.id)
       })
-
-
 		},
-
   }
 });

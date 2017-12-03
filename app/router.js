@@ -13,6 +13,7 @@ Router.map(function() {
   this.route('nueva-materia');
   this.route('materia-detail', {path: '/materia-detail/:clave'});
   this.route('grupo-detail', {path: '/grupo-detail/:id'});
+  this.route('nuevo-grupo', {path: '/nuevo-grupo/:idm'});
 });
 
 export default Router;

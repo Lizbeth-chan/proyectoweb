@@ -5,5 +5,5 @@ identificador: DS.attr('string'),
 periodo: DS.attr('string'),
 profesores: DS.hasMany('profesor'),
 alumnos: DS.hasMany('alumno'),
-materias: DS.hasMany('materia')
+materia: DS.belongsTo('materia')
 });
