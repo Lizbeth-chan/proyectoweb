@@ -12,6 +12,7 @@ Router.map(function() {
   this.route('lista-examenes');
   this.route('nueva-materia');
   this.route('materia-detail', {path: '/materia-detail/:clave'});
+  this.route('grupo-detail', {path: '/grupo-detail/:id'});
 });
 
 export default Router;

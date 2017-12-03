@@ -10,6 +10,8 @@ actions:{
   willTransition(transition){
     this.get('currentModel').rollbackAttributes();
     //ember documentacion
-  }
+  },
+
+
 }
 });

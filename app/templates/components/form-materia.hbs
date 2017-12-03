@@ -7,8 +7,8 @@ nombre{{input type='text' value=materia.nombre}}
 <table class="table table-hover table-sm table-bordered table-info">
     <thead class="thead-dark">
       <tr>
-        <th scope="col">Clave</th>
-        <th scope="col">Materia</th>
+        <th scope="col">Identificador</th>
+        <th scope="col">Periodo</th>
         <th scope="col"> </th>
       </tr>
     </thead>
@@ -22,10 +22,10 @@ nombre{{input type='text' value=materia.nombre}}
             {{input type='text' value=g.periodo}}
           </td>
           <td>
-            <!-- {{#link-to "materia-detail" materia.id }}
+            {{#link-to "grupo-detail" g.id}}
               <button class="btn btn-success btn-sm ">Detalles</button>
-            {{/link-to}}  -->
-            <button class="btn btn-danger btn-sm "{{action 'destroyGrupo'}}>Borrar</button>
+            {{/link-to}}
+            <button class="btn btn-danger btn-sm "{{action 'destroyGrupo' materia.id}}>Borrar</button>
           </td>
         </tr>
       {{/each}}

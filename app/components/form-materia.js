@@ -19,8 +19,13 @@ export default Ember.Component.extend({
     saveGrupo(){
       this.get('materia').get('grupos').createRecord()//se obtiene la materia, el arreglo de grupos y se crea un record
     },
-    destroyGrupo(){
-     this.get('materia').get('grupos').invoke('destroyRecord')
+    destroyGrupo(m){
+      let arr = m.get('grupos')
+      arr.forEach((item)=>{
+        console.log('item'+ item.id)
+      })
+
+
 		},
 
   }
