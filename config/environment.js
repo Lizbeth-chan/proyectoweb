@@ -30,6 +30,14 @@ module.exports = function(environment) {
     // ENV.APP.LOG_TRANSITIONS = true;
     // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
     // ENV.APP.LOG_VIEW_LOOKUPS = true;
+    ENV.firebase = {
+      apiKey: "AIzaSyAze3ecveLJyrHWwr97nQmvBnPxLEh02a4",
+    authDomain: "app4teachers.firebaseapp.com",
+    databaseURL: "https://app4teachers.firebaseio.com",
+    projectId: "app4teachers",
+    storageBucket: "app4teachers.appspot.com",
+    messagingSenderId: "143661235677"
+    }
   }
 
   if (environment === 'test') {

@@ -7,6 +7,11 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  this.route('inicio');
+  this.route('lista-materias');
+  this.route('lista-examenes');
+  this.route('nueva-materia');
+  this.route('materia-detail', {path: '/materia-detail/:clave'});
 });
 
 export default Router;
