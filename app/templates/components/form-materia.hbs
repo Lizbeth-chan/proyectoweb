@@ -4,7 +4,8 @@ clave {{input type='text' value=materia.clave }}
 nombre{{input type='text' value=materia.nombre }}
 
 {{#link-to 'nuevo-grupo' materia.id}} <button class="btn btn-primary">Añadir grupo</button> {{/link-to}}
-
+<hr>
+<h2>GRUPOS</h2>
 <table class="table table-hover table-sm table-bordered table-info">
     <thead class="thead-dark">
       <tr>
@@ -24,8 +25,8 @@ nombre{{input type='text' value=materia.nombre }}
             {{g.periodo}}
           </td>
           <td>
-            {{#link-to "grupo-detail" g.id }}
-              <button class="btn btn-success btn-sm ">Detalles</button>
+            {{#link-to "grupo-detail" g.id}}
+              <button class="btn btn-success btn-sm">Detalles</button>
             {{/link-to}} <button class="btn btn-danger btn-sm "{{action 'destroyGrupo' materia g}}>Borrar</button>
           </td>
         </tr>
@@ -38,42 +39,6 @@ nombre{{input type='text' value=materia.nombre }}
 
 
 
-
-<!-- {{form-grupo materia=model didSave=(action 'veAlaLista' materia)}}
-
-<button type="button" {{action "saveGrupo"}}>Añadir grupo</button>
-
-<table class="table table-hover table-sm table-bordered table-info">
-    <thead class="thead-dark">
-      <tr>
-        <th scope="col">Identificador</th>
-        <th scope="col">Periodo</th>
-        <th scope="col"> </th>
-      </tr>
-    </thead>
-    <tbody>
-      {{#each materia.grupos as |g|}}
-        <tr>
-          <th>
-            {{input value=g.identificador}}
-          </th>
-          <td>
-            {{input type='text' value=g.periodo}}
-          </td>
-          <td>
-            {{materia.id}}
-
-          </td>
-          <td>
-            {{#link-to "grupo-detail" g.id}}
-              <button class="btn btn-success btn-sm ">Detalles</button>
-            {{/link-to}}
-            <button class="btn btn-danger btn-sm "{{action 'destroyGrupo' materia.id}}>Borrar</button>
-          </td>
-        </tr>
-      {{/each}}
-    </tbody>
-</table> -->
 
 <button class="btn btn-info">Guardar</button>
 <hr>

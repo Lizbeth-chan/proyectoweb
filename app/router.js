@@ -14,6 +14,10 @@ Router.map(function() {
   this.route('materia-detail', {path: '/materia-detail/:clave'});
   this.route('grupo-detail', {path: '/grupo-detail/:id'});
   this.route('nuevo-grupo', {path: '/nuevo-grupo/:idm'});
+  this.route('nuevo-examen');
+  this.route('examen-detail',  {path: '/examen-detail/:ide'});
+  this.route('nueva-pregunta',  {path: '/nueva-pregunta/:idp'});
+  this.route('pregunta-detail',  {path: '/pregunta-detail/:pd'});
 });
 
 export default Router;

@@ -1,1 +1,32 @@
-<h2>Examenes</h2>
+<ul>
+{{#link-to 'nuevo-examen'}}<button class="btn btn-primary">Crear nuevo examen</button>{{/link-to}}
+</ul>
+
+<table class="table table-hover table-sm table-bordered table-info">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">Id examen</th>
+        <th scope="col">fecha</th>
+        <th scope="col">.</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each model as |examen|}}
+        <tr>
+          <th>
+            {{examen.id_examen}}
+          </th>
+          <td>
+            {{examen.fecha}}
+          </td>
+          <td>
+            {{#link-to "examen-detail" examen.id }}
+              <button class="btn btn-success btn-sm ">Detalles</button>
+            {{/link-to}} <button class="btn btn-danger btn-sm "{{action 'borrar' examen}}>Borrar</button>
+          </td>
+        </tr>
+
+
+      {{/each}}
+    </tbody>
+</table>

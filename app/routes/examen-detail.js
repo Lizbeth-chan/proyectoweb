@@ -2,7 +2,6 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
   model(params){
-    return this.store.find('grupo', params.id)
-
+    return this.store.find('examen',params.ide)
   },
 });

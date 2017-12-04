@@ -1,0 +1,30 @@
+<form {{action 'save' on='submit'}}>
+  Identificador {{input type='text' value=pregunta.identificador}}
+  Pregunta {{input type='text' value=pregunta.preg}}
+
+
+  <button {{action 'saveRespuesta'}}>Añadir respuesta</button>
+  <table class="table table-hover table-sm table-bordered table-info">
+    <thead class="thead-dark">
+      <tr>
+
+        <th scope="col">Respuesta</th>
+        <th scope="col"></th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each pregunta.respuestas as |r|}}
+        <tr>
+          <th>
+            {{input value=r.identificador}}
+          </th>
+          <td>
+            {{input type='text' value=r.respuesta}}
+          </td>
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
+
+  <button class="btn btn-info">Guardar</button>
+</form>

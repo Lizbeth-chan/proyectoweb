@@ -4,19 +4,19 @@ export default Ember.Component.extend({
   store: Ember.inject.service('store'),
   actions:{
     save(){
-      let materia= this.get('materia');
+      let examen= this.get('examen');
 
-      materia.save().then(()=>{
-        Ember.RSVP.all(this.get('materia.grupos').invoke('save')).then(()=>{
+      examen.save().then(()=>{
+        Ember.RSVP.all(this.get('examen.preguntas').invoke('save')).then(()=>{
           this.sendAction('didSave');
         })
       })
     },
     destroyGrupo(m, gr){
-    m.get('grupos').forEach((item)=>{
+    m.get('preguntas').forEach((item)=>{
       if(item.id == gr.id) gr.destroyRecord();
     })
 
-		},
+    },
   }
 });

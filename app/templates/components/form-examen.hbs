@@ -1,0 +1,37 @@
+<form {{action 'save' on='submit'}}>
+  id examen {{input type='text' value=examen.id_examen}}
+  fecha {{input type='text' value=examen.fecha}}
+  {{#link-to 'nueva-pregunta' examen.id}} <button class="btn btn-primary">Añadir pregunta</button> {{/link-to}}
+  <hr>
+  <h2>PREGUNTAS</h2>
+  <table class="table table-hover table-sm table-bordered table-info">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">Pregunta</th>
+          <th scope="col">Numero respuestas</th>
+          <!-- computed-->
+          <th scope="col"> </th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each examen.preguntas as |p|}}
+          <tr>
+            <th>
+              {{p.preg}}
+            </th>
+            <td>
+              numero
+            </td>
+            <td>
+              {{#link-to "pregunta-detail" p.id}}
+                <button class="btn btn-success btn-sm">Detalles</button>
+              {{/link-to}} <button class="btn btn-danger btn-sm "{{action 'destroyPregunta' examen p}}>Borrar</button>
+            </td>
+          </tr>
+
+        {{/each}}
+      </tbody>
+  </table>
+  <button class="btn btn-info">Guardar</button>
+  <hr>
+</form>

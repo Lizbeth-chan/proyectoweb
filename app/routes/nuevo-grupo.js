@@ -15,15 +15,3 @@ export default Ember.Route.extend({
     },
 
 });
-
-// save(){
-//   let materia= this.get('materia');
-//   // if(Ember.isBlank(materia.get('nombre'))){
-//   //   alert('El campo de nombre no puede estar vacio');
-//   //   return;
-//   // }
-//   materia.save().then(()=>{
-//     Ember.RSVP.all(this.get('materia.grupos').invoke('save')).then(()=>{
-//       this.sendAction('didSave');
-//     })
-//   })

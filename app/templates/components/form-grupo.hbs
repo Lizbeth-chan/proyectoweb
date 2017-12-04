@@ -2,10 +2,42 @@
   Identificador {{input type='text' value=grupo.identificador}}
   Periodo {{input type='text' value=grupo.periodo}}
 
-<!-- <button {{actions 'saveAlumno'}}>Añadir Alumno</button>
+<button {{action 'saveAlumno'}}>Añadir Alumno</button>
 <table class="table table-hover table-sm table-bordered table-info">
-
-</table> -->
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">Id Alumno</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Apellido materno</th>
+      <th scope="col">Apellido paterno</th>
+      <th scope="col"></th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each grupo.alumnos as |a|}}
+      <tr>
+        <th>
+          {{input value=a.id_alumno}}
+        </th>
+        <td>
+          {{input type='text' value=a.nombre}}
+        </td>
+        <td>
+          {{input type='text' value=a.apellido_paterno}}
+        </td>
+        <td>
+          {{input type='text' value=a.apellido_materno}}
+        </td>
+        <!-- <td>
+          {{#link-to "grupo-detail" g.id}}
+            <button class="btn btn-success btn-sm ">Detalles</button>
+          {{/link-to}}
+          <button class="btn btn-danger btn-sm "{{action 'destroyGrupo' materia.id}}>Borrar</button>
+        </td> -->
+      </tr>
+    {{/each}}
+  </tbody>
+</table>
 
 <button class="btn btn-info">Guardar</button>
 
