@@ -5,4 +5,5 @@ export default Ember.Route.extend({
     let id = params.clave;
     return this.store.find('materia',id)
   },
+  
 });
