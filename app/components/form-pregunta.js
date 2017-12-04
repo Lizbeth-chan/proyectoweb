@@ -6,8 +6,7 @@ actions:{
   save(){
 
       let pregunta = this.get('pregunta');
-      console.log(pregunta.id)
-      debugger
+    
       pregunta.save().then(()=>{
         Ember.RSVP.all(this.get('pregunta.respuestas').invoke('save')).then(()=>{
             this.sendAction('didSave');

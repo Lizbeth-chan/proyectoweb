@@ -5,14 +5,14 @@ export default Ember.Component.extend({
   actions:{
     save(){
       let examen= this.get('examen');
-
+      
       examen.save().then(()=>{
         Ember.RSVP.all(this.get('examen.preguntas').invoke('save')).then(()=>{
           this.sendAction('didSave');
         })
       })
     },
-    destroyGrupo(m, gr){
+    destroyPregunta(m, gr){
     m.get('preguntas').forEach((item)=>{
       if(item.id == gr.id) gr.destroyRecord();
     })
