@@ -3,6 +3,7 @@ import Ember from 'ember';
 export default Ember.Route.extend({
   model(){
   let materia = this.get('store').createRecord('materia', {});
+  materia.save();
   return materia;
 },
 
@@ -15,3 +16,4 @@ actions:{
 
 }
 });
+// return this.get('store').createRecord('grupo');

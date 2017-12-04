@@ -1,1 +1,4 @@
-<h4>Grupo detail</h4>
+<h4>{{model.nombre}}</h4>
+
+{{form-grupo grupo=model didSave=(action 'veAlaLista' model.id)}}
+<button class="btn btn-dark"{{action 'regresar' model.id}}>Regresar</button>

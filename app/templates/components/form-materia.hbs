@@ -1,7 +1,7 @@
 <form  {{action 'save' on='submit'}}>
 
-clave {{input type='text' value=materia.clave}}
-nombre{{input type='text' value=materia.nombre}}
+clave {{input type='text' value=materia.clave }}
+nombre{{input type='text' value=materia.nombre }}
 
 {{#link-to 'nuevo-grupo' materia.id}} <button class="btn btn-primary">Añadir grupo</button> {{/link-to}}
 
@@ -26,7 +26,7 @@ nombre{{input type='text' value=materia.nombre}}
           <td>
             {{#link-to "grupo-detail" g.id }}
               <button class="btn btn-success btn-sm ">Detalles</button>
-            {{/link-to}} <button class="btn btn-danger btn-sm "{{action 'borrar'}}>Borrar</button>
+            {{/link-to}} <button class="btn btn-danger btn-sm "{{action 'destroyGrupo' materia g}}>Borrar</button>
           </td>
         </tr>
 

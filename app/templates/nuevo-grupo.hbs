@@ -1,3 +1,3 @@
-{{form-grupo grupo=model didSave=(action 'veAlaLista')}}
-{{grupo.identificador}}
+{{form-grupo grupo=grupo didSave=(action 'veAlaLista' model.id)}}
+
 <button class="btn btn-dark"{{action 'veAlaLista' model.id}}>Regresar</button>
